@@ -42,6 +42,10 @@ public class Args {
             if (param.equals("")){
                 return;
             }
+            else{
+                resultMap.put(String.valueOf(command), Integer.valueOf(param));
+                return;
+            }
         }
         resultMap.put(String.valueOf(command), param);
     }
@@ -79,10 +83,6 @@ public class Args {
                 return null;
             }
         }
-//        //处理整型
-//        if (key.equals("int")){
-//            return Integer.valueOf((String) value);
-//        }
         return value;
     }
 
